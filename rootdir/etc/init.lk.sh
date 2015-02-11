@@ -52,7 +52,7 @@ echo 1 > /sys/devices/system/cpu/cpu0/online
 echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 echo "0 1344000:20000" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
 echo 90 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
-echo 40000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
+echo 52000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
 echo 160000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
 echo 960000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
 echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
@@ -68,7 +68,7 @@ echo 1 > /sys/devices/system/cpu/cpu4/online
 echo "interactive" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 echo "0 998400:20000" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
 echo 90 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
-echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
+echo 52000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
 echo 160000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
 echo 806400 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
 echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
