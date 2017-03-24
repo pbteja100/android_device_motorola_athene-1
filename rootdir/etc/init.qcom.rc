@@ -202,6 +202,7 @@ on boot
     # FPC home button permissions
     chown system system /sys/homebutton/enable
     chown system system /sys/homebutton/enable_wakeup
+    chown system system /sys/homebutton/key
 
     # SMBChg control
     chown system system /sys/kernel/smbchg_control/turbo_charging
