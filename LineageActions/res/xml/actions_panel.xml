@@ -58,11 +58,20 @@
         android:key="fp_key"
         android:title="@string/fingerprint_title" >
 
-
         <SwitchPreference
             android:key="fp_home"
-            android:title="@string/fingerprint_as_home_title"
-            android:summary="@string/fingerprint_as_home_summary" />
+            android:title="Use FP sensor as a Key"
+            android:summary="Trigger custom actions with FP sensor" />
+
+        <ListPreference
+            android:dependency="fp_home"
+            android:title="FP sensor actions"
+            android:summary="Select an action for FP sensor"
+            android:dialogTitle="Fingerprint sensor actions"
+            android:key="fp_keys"
+            android:defaultValue="116"
+            android:entries="@array/fp_keys_listArray"
+            android:entryValues="@array/fp_keys_listValues" />
 
         <SwitchPreference
             android:key="fp_home_wakeup"
