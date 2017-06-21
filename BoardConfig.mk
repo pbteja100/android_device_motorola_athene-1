@@ -171,6 +171,7 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
