@@ -97,6 +97,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
+	debug.sf.early_phase_offset_ns=5000000 \
 	debug.sf.hw=1 \
 	debug.sf.latch_unsignaled=1 \
 	debug.sf.recomputecrop=0 \
