@@ -224,6 +224,7 @@ PRODUCT_BOOT_JARS += \
 
 # OMX
 PRODUCT_PACKAGES += \
+    libaacwrapper \
     libc2dcolorconvert \
     libOmxAacDec \
     libOmxAacEnc \
