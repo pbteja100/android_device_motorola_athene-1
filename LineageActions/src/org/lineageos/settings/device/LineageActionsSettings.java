@@ -66,8 +66,16 @@ public class LineageActionsSettings {
         return mChopChopEnabled;
     }
 
+    public static boolean isAODEnabled(Context context) {
+        return new AmbientDisplayConfiguration(context).alwaysOnEnabled(UserHandle.USER_CURRENT);
+    }
+
     public static boolean isDozeEnabled(Context context) {
         return new AmbientDisplayConfiguration(context).pulseOnNotificationEnabled(UserHandle.USER_CURRENT);
+    }
+
+    public boolean isAODEnabled() {
+        return isAODEnabled(mContext);
     }
 
     public boolean isDozeEnabled() {
@@ -75,11 +83,11 @@ public class LineageActionsSettings {
     }
 
     public boolean isIrWakeupEnabled() {
-        return isDozeEnabled() && mIrWakeUpEnabled;
+        return isDozeEnabled() && !isAODEnabled() && mIrWakeUpEnabled;
     }
 
     public boolean isPickUpEnabled() {
-        return isDozeEnabled() && mPickUpGestureEnabled;
+        return isDozeEnabled() && !isAODEnabled() && mPickUpGestureEnabled;
     }
 
     public boolean isIrSilencerEnabled() {
