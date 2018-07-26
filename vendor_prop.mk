@@ -25,6 +25,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.audio.fluence.voicecall=true \
 	persist.vendor.audio.fluence.voicecomm=true \
 	persist.vendor.audio.fluence.voicerec=false \
+	persist.vendor.audio.hw.binder.size_kbyte=1024 \
 	ro.config.vc_call_vol_steps=7 \
 	ro.config.media_vol_steps=25 \
 	ro.qc.sdk.audio.ssr=false \
