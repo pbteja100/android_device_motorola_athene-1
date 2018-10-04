@@ -50,8 +50,8 @@
         <value>1094400</value>
         <value>1209600</value>
     </array>
-    <item name="cpu.idle">2.9</item>
-    <item name="cpu.awake">7.1</item>
+    <item name="cpu.suspend">2.9</item>
+    <item name="cpu.idle">7.1</item>
     <item name="camera.avg">111</item>
     <item name="camera.flashlight">157</item>
     <item name="battery.capacity">3000</item>
