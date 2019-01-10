@@ -66,7 +66,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.camera.display.lmax=1280x720 \
 	persist.camera.HAL3.enabled=0 \
 	persist.camera.gyro.disable=0 \
-	camera.hal1.packagelist=com.skype.raider \
+	vendor.camera.hal1.packagelist=com.skype.raider \
 	media.camera.ts.monotonic=1
 
 # CNE
