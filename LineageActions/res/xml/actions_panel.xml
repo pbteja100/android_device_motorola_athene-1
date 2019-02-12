@@ -73,11 +73,6 @@
             android:entries="@array/fp_keys_listArray"
             android:entryValues="@array/fp_keys_listValues" />
 
-        <SwitchPreference
-            android:key="fp_home_wakeup"
-            android:title="@string/fingerprint_wakeup_title"
-            android:summary="@string/fingerprint_wakeup_summary" />
-
     </PreferenceCategory>
 
 </PreferenceScreen>
