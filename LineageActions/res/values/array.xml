@@ -16,12 +16,18 @@
 -->
 <resources>
     <string-array name="fp_keys_listArray">
-        <item>Use as Homebutton</item>
+        <item>Use as Home button</item>
+        <item>Use as Back button</item>
+        <item>Increase Volume</item>
+        <item>Decrease Volume</item>
         <item>Lock the device</item>
     </string-array>
 
     <string-array name="fp_keys_listValues">
         <item>102</item>
+        <item>158</item>
+        <item>115</item>
+        <item>114</item>
         <item>116</item>
     </string-array>
 </resources>
