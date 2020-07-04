@@ -242,9 +242,18 @@ TARGET_CLUSTER_SWITCHED_PLACES := true
 TARGET_HAS_NO_WLAN_STATS := true
 TARGET_RPM_SYSTEM_STAT := /d/rpm_stats
 
-# Strip debug
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+# Dex
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
+# Reduce system image size by limiting java debug info.
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+
+# Speed profile services and wifi-service to reduce RAM and storage.
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
+# Always preopt extracted APKs to prevent extracting out of the APK
+# for gms modules.
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 
 # Thermal
 USE_DEVICE_SPECIFIC_THERMAL := true
