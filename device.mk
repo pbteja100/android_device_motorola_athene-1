@@ -18,6 +18,9 @@
 # Also get non-open-source specific aspects if available
 $(call inherit-product, vendor/motorola/athene/athene-vendor.mk)
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
 # Properties
 -include device/motorola/athene/vendor_prop.mk
 
