@@ -24,6 +24,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # Properties
 -include device/motorola/athene/vendor_prop.mk
 
+# Privapp
+PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=log
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
