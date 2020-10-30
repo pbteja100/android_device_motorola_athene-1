@@ -16,3 +16,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosip_athene.mk
+
+COMMON_LUNCH_CHOICES := \
+    aosip_athene-user \
+    aosip_athene-userdebug \
+    aosip_athene-eng
