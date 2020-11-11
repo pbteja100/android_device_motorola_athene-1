@@ -17,6 +17,15 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Jelly
+# TARGET_USE_JELLY := true
+
+# Required packages
+# PRODUCT_PACKAGES += Jelly
+
+# Required packages
+PRODUCT_PACKAGES += Calendar
+
 # Inherit some common AOSiP stuff.
 $(call inherit-product, vendor/aosip/config/common.mk)
 
