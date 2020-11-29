@@ -27,7 +27,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 PRODUCT_PACKAGES += Calendar
 
 # Inherit some common AOSiP stuff.
-$(call inherit-product, vendor/aosip/config/common.mk)
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
 # Inherit from athene device
 $(call inherit-product, device/motorola/athene/device.mk)
