@@ -83,6 +83,7 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
 
 PRODUCT_PACKAGES += \
+    audiod \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
