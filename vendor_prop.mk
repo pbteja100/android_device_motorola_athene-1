@@ -315,6 +315,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # ADDITIONAL_BUILD_PROPERTIES
 #
 PRODUCT_PROPERTY_OVERRIDES += \
+	ro.product.first_api_level=23 \
 	ro.build.version.qcom=LA.BR.1.3.7-04410-8976.0 \
 	ro.mot.build.customerid=retail \
 	ro.mot.build.version.sdk_int=28 \
