@@ -436,7 +436,7 @@
        <item>"/system/framework/boot-core-libart.vdex"</item>
        <item>"/system/framework/boot-QPerformance.vdex"</item>
        <item>"/system/framework/boot-UxPerformance.vdex"</item>
-       <item>"/system/lib64/libsurfaceflinger.so"</item>
+       <item>"/system/lib/libsurfaceflinger.so"</item>
    </string-array>
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
