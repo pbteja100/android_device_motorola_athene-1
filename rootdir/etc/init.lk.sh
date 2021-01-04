@@ -146,7 +146,11 @@ echo lzo > /sys/block/zram0/comp_algorithm
 echo 1 > /sys/block/zram0/reset
 echo 0 > /sys/block/zram0/disksize
 echo 8 > /sys/block/zram0/max_comp_streams
-echo 536870912 > /sys/block/zram0/disksize
+if [ $ram -gt 2097152 ]; then
+	echo 536870912 > /sys/block/zram0/disksize
+else
+	echo 1073741824 > /sys/block/zram0/disksize
+fi
 echo 0 > /proc/sys/vm/page-cluster
 echo 100 > /proc/sys/vm/swappiness
 /system/bin/mkswap /dev/block/zram0
