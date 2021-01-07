@@ -277,7 +277,6 @@ PRODUCT_PACKAGES += \
     init.oem.hw.sh \
     init.qcom.power.rc \
     init.qcom.rc \
-    init.lk.sh \
     ueventd.qcom.rc
 
 PRODUCT_COPY_FILES += \
