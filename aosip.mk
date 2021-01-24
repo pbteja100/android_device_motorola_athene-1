@@ -25,6 +25,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Required packages
 PRODUCT_PACKAGES += Calendar
 
+# Local Terminal
+PRODUCT_PACKAGES += Terminal
+
 # Inherit some common AOSiP stuff.
 $(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
