@@ -44,7 +44,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	qcom.hw.aac.encoder=false \
 	audio.parser.ip.buffer.size=262144 \
 	vendor.audio_hal.period_size=240 \
-	persist.audio.endcall.delay=250
+	persist.audio.endcall.delay=250 \
+	vendor.audio.dolby.ds2.enabled=true \
+	vendor.audio.dolby.ds2.hardbypass=false
 
 # Debug
 PRODUCT_PROPERTY_OVERRIDES += \
