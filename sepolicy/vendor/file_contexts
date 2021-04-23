@@ -1,3 +1,6 @@
+# Audio
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service                     u:object_r:hal_dms_default_exec:s0
+
 # Binaries
 /system/bin/batt_health                                     u:object_r:batt_health_exec:s0
 /system/bin/charge_only_mode                                u:object_r:charge_only_exec:s0
