@@ -50,11 +50,11 @@ PRODUCT_MANUFACTURER := Motorola
 BOARD_VENDOR := motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-	PRIVATE_BUILD_DESC="coral-user 11 RQ3A.210605.005 7349499 release-keys" \
+	PRIVATE_BUILD_DESC="coral-user 11 RQ3A.210705.001 7380771 release-keys" \
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := google/coral/coral:11/RQ3A.210605.005/7349499:user/release-keys
-VENDOR_BUILD_FINGERPRINT := google/coral/coral:11/RQ3A.210605.005/7349499:user/release-keys
+BUILD_FINGERPRINT := google/coral/coral:11/RQ3A.210705.001/7380771:user/release-keys
+VENDOR_BUILD_FINGERPRINT := google/coral/coral:11/RQ3A.210705.001/7380771:user/release-keys
