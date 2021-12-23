@@ -15,9 +15,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosip_athene.mk
+    $(LOCAL_DIR)/lineage_athene.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosip_athene-user \
-    aosip_athene-userdebug \
-    aosip_athene-eng
+    lineage_athene-user \
+    lineage_athene-userdebug \
+    lineage_athene-eng

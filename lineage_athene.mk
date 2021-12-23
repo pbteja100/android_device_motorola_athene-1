@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # TARGET_USE_JELLY := true
 
 # Required packages
-# PRODUCT_PACKAGES += Jelly
+PRODUCT_PACKAGES += Jelly
 
 # Required packages
 PRODUCT_PACKAGES += Calendar
@@ -30,7 +30,7 @@ PRODUCT_PACKAGES += Calendar
 PRODUCT_PACKAGES += Terminal
 
 # Inherit some common AOSiP stuff.
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from athene device
 $(call inherit-product, device/motorola/athene/device.mk)
@@ -42,7 +42,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := athene
-PRODUCT_NAME := aosip_athene
+PRODUCT_NAME := lineage_athene
 PRODUCT_RELEASE_NAME := athene
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola

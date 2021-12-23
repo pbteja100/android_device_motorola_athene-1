@@ -56,6 +56,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
@@ -82,7 +86,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-	android.hardware.power@1.1-service-qti
+    android.hardware.power@1.1-service-qti
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -101,6 +105,10 @@ PRODUCT_PACKAGES += \
 # SecureElement
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0-service
+
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
 
 # WiFi
 PRODUCT_PACKAGES += \
