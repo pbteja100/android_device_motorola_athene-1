@@ -342,7 +342,9 @@ PRODUCT_COPY_FILES += \
 
 # VNDK-SP:
 PRODUCT_PACKAGES += \
-    vndk-sp
+    vndk-sp \
+    libhwbinder \
+    libhidltransport
 
 # Wifi
 PRODUCT_PACKAGES += \

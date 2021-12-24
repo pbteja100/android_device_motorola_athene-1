@@ -18,7 +18,6 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_SHARED_LIBRARIES += \
     libhidlbase \
-    libhidltransport \
     android.hardware.sensors@1.0
 
 include $(BUILD_EXECUTABLE) 
