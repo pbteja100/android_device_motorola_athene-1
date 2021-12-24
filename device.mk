@@ -76,13 +76,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ld.config.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/swcodec/ld.config.txt
 
 # Audio
+# Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@2.0-service \
+    android.hardware.soundtrigger@2.0-impl \
+    android.hardware.soundtrigger@2.0-service \
+    android.hardware.broadcastradio@1.0-impl \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler \
-
-PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
@@ -117,6 +123,8 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-service \
+    android.hardware.camera.provider@2.4-impl:32 \
     libbson \
     libshims_camera \
     Camera2
@@ -124,6 +132,10 @@ PRODUCT_PACKAGES += \
 # Disable camera Treble path
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_treble=true
+
+# Crypto
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0-service-dlsym-qti
 
 # Disable Vulkan
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -139,6 +151,11 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
     libdisplayconfig \
     libhwc2on1adapter \
     libqdMetaData.system \
@@ -147,19 +164,36 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8952 \
     memtrack.msm8952
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.2-service.clearkey
+
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
     libebtc
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service_32
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
+# Gatekeeper HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.1-impl-qti \
+    android.hardware.gnss@1.1-service-qti \
     libgnss \
     libgnsspps
 
@@ -170,6 +204,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
     $(LOCAL_PATH)/gps/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-impl \
+    android.hardware.health@2.0-service
+
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0 \
+    android.hidl.manager@1.0-java
 
 # IPA Manager
 PRODUCT_PACKAGES += \
@@ -194,9 +239,23 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     ims-ext-common_system
 
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8952
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service.athene
+
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
 
 # OEM
 PRODUCT_COPY_FILES += \
@@ -218,11 +277,20 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 
+# Memtrack HAL
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service
+
 # Netutils
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
     libandroid_net \
     netutils-wrapper-1.0
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.1-service-qti
 
 # RCS
 PRODUCT_PACKAGES += \
@@ -230,6 +298,10 @@ PRODUCT_PACKAGES += \
     rcs_service_aidl.xml \
     rcs_service_api \
     rcs_service_api.xml
+
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -301,6 +373,8 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0 \
+    android.hardware.radio.config@1.0 \
     libcnefeatureconfig \
     librmnetctl \
     libxml2
@@ -317,6 +391,7 @@ PRODUCT_COPY_FILES += \
 
 # SecureElement
 PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0-service \
     SecureElement
 
 PRODUCT_COPY_FILES += \
@@ -324,6 +399,8 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service_moto \
     libsensorhub \
     motosh \
     sensorhub.msm8952 \
@@ -340,14 +417,28 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-athene.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-athene.conf
 
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
+
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service.basic
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
+
 # VNDK-SP:
 PRODUCT_PACKAGES += \
     vndk-sp \
     libhwbinder \
     libhidltransport
 
-# Wifi
+# WiFi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     hostapd \
     libwpa_client \
     wpa_supplicant \
@@ -387,6 +478,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
-
-# HIDL HALs
-$(call inherit-product, $(LOCAL_PATH)/hidl.mk)
